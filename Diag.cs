@@ -31,7 +31,7 @@ public class Diag {
   private static Diag Iterate(Diag a, Diag b, Func<double, double, double> F) {
     if(a.x.Length != b.x.Length) throw new Exception();
     Diag result = new Diag(a.x.Length);
-    for(int i = 0; i < result.x.Length; i++) result.x[i] = F.Invoke(a.x[i], b.x[i]);
+    for(int i = 0; i < result.x.Length; i++) { result.x[i] = F.Invoke(a.x[i], b.x[i]); }
     return result;
   }
 }
