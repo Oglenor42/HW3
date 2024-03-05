@@ -26,7 +26,7 @@ public class Diag {
     if(i == j) x[i] = e; else throw new Exception();
   }
 
-  private bool Range(int i, int j) { return i < 1 || i > x.Length || j < 1 || j > x.Length; }
+  private bool Range(int i, int j) { return i < 0 || i > x.Length || j < 0 || j > x.Length; }
 
   private static Diag Iterate(Diag a, Diag b, Func<double, double, double> F) {
     if(a.x.Length != b.x.Length) throw new Exception();
